@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styleSyntax.css">
+<link rel="stylesheet" href="styleRainbow.css">
+
+        
+<body>
+
+<div id="mainMenu">
+    <div id="mainMenuButton">
+        <a href="index.html" style="text-decoration: none;">
+            <div id="mainMenuButtonText">
+                <span style="color: #e0e0e0da;">Breez<span class="blinkingLine">_</span></span>
+            </div>
+        </a>
+        <div id="mainMenuSearch">
+            <form name="searchContent">
+                <input type="text" id="mainMenuSearchText" placeholder="Search Documentation" style="
+                background-color: #15110e;
+                outline: none;
+                border-color: transparent;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                font-size: 1.5em;
+                color: #e0e0e0da;
+                
+                display: flex;
+                justify-content: center;
+             
+                overflow: auto;
+                white-space: nowrap;">
+            </form>
+        </div>
+    </div>
+    <div id="mainMenuFileList"><pre>
+ <a href="index.html" style="text-decoration: none; color: #333333;">Home</a>
+ <a href="quickstart.html" style="text-decoration: none; color: #333333;">Quickstart guide</a>
+    </pre></div>
+</div>
+<div id="mainText">
+
+
+<h1><p>Quickstart guide</p></h1>
+
+<p>Welcome to the Breez quickstart guide, this guide is aimed to get new users familiar with the basic concepts of Breez
+Continue down below to get started.</p>
+
+<h1><p>What Is Breez Anyway?</p></h1>
+
+<p>Breez is a compiler / transpiler for the Kerbal Space Program mod called kOS. It is used for programming various things like rockets, planes and more.
+Since kOS is somewhat overly verbose (as it's meant for newer programmers) we decided to create a much more compact and true to life language.</p>
+
+<p>You can do a lot in Breez, and our current list of "Tokens" is always growing to cover everything in the kOS language.</p>
+
+<b><p>If you haven't already, please visit the <a href="download.html">Download and installation</a> guide</p></b>
+
+<h1><p>First Breez Program</p></h1>
+
+<p>Your first program in a language you've never used is usually a <i>"Hello World"</i> program, however we're going to make a countdown script (because we're talking about rockets science).</p>
+
+<p>To get started, open up a text editor and feel free to follow along.</p>
+
+<div class="code"><pre><p>
+<span class="keyword">global</span> unusedVariable <span class="STR_LIT_DEC">=&gt;</span> <span class="number">1</span>;
+<span class="keyword">for local</span> terminalCount <span class="STR_LIT_DEC">=&gt;</span> <span class="number">10</span>, terminalCount != <span class="number">0</span>, --terminalCount { 
+    <span class="comment"># until the variable = 0, take away 1 each time the loop finishes.</span>
+    <span class="builtInFunction">clear</span>();              <span class="comment"># This clears the terminal each time, so you dont have a list of numbers.</span>
+    <span class="builtInFunction">print</span>(terminalCount)  <span class="comment"># This outputs the variable onto your terminal so you can see how close you are to T-0.</span>
+    <span class="builtInFunction">hold</span>(<span class="number">1</span>);              <span class="comment"># Similar to how we use Wait in kOS, this waits 1 second.</span>
+};
+</p></pre></div>
+<p>Now, try to compile the code above with <span class="codeInline">&MediumSpace;breez &lt;Filename&gt;.briz&MediumSpace;</span> (or if you have installed Breez manually, run <span class="codeInline">&MediumSpace;python3 Yamal.py &lt;Filename&gt;.briz&MediumSpace;</span>), and then run it in your game, and then come back to the guide!
+What are your results, did you get the annoying error sound? Good.</p>
+
+<p>As you can probably tell, we have missed a semicolon (which is a common mistake amongst programmers) so always check your code for bugs!
+To fix it, just simply put a semicolon at the end of line 5, now try again!</p>
+
+<p>Now, you should see something like this (don't be scared if your output isn't colored, Windows just doesn't support ANSI color codes):</p>
+<img src="YamalOutput.png" width="542" height="80">
+<p>You also probably see a warning that says that variable <span class="codeInline">&MediumSpace;unusedVariable&MediumSpace;</span> isn't used, it's completely normal and will also show up
+if you have an unused functions. This was implemented to minimize space taken up by the program on kOS CPU<p>
+
+</div>
+
+
+
+<!--This section is responsible for the rainbow lines that you see in the background-->
+<div class="redR"></div>
+<div class="orangeR"></div>
+<div class="yellowR"></div>
+<div class="greenR"></div>
+<div class="blueR"></div>
+<div class="redL"></div>
+<div class="orangeL"></div>
+<div class="yellowL"></div>
+<div class="greenL"></div>
+<div class="blueL"></div>
+
+
+</body>
+</head>
+</html>

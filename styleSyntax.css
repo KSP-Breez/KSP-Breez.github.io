@@ -1,0 +1,35 @@
+.comment {
+  color: #575656de;
+}
+
+.keyword {
+  color: #907bb0;
+}
+
+.builtInFunction {
+  color: #bdd962;
+}
+
+.builtInVariable {
+  color: #5fdbd9;
+}
+
+.userFunction {
+  color: #62d9a8;
+}
+
+.string {
+  color: #c99077;
+}
+
+.number {
+  color: #58c9b9;
+}
+
+.directives {
+  color: #db7151;
+}
+
+.STR_LIT_DEC {
+  color: #4994c5;
+}

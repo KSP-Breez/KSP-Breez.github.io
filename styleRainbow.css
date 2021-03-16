@@ -1,0 +1,99 @@
+.redR {
+    height: 110%;
+    width: 0.7%;
+    color: transparent;
+    background-color: #c23b37;
+    position: fixed;
+    top: 0;
+    right: 2.8%;
+}
+
+.orangeR {
+  height: 110%;
+  width: 0.7%;
+  color: transparent;
+  background-color: #cd694f;
+  position: fixed;
+  top: 0;
+  right: 2.1%;
+}
+
+.yellowR {
+  height: 110%;
+  width: 0.7%;
+  color: transparent;
+  background-color: #edc850;
+  position: fixed;
+  top: 0;
+  right: 1.4%;
+}
+
+.greenR {
+  height: 110%;
+  width: 0.7%;
+  color: transparent;
+  background-color: #67ab53;
+  position: fixed;
+  top: 0;
+  right: 0.7%;
+}
+
+.blueR {
+  height: 110%;
+  width: 0.7%;
+  color: transparent;
+  background-color: #3da0d4;
+  position: fixed;
+  top: 0;
+  right: 0%;
+}
+
+.redL {
+  height: 110%;
+  width: 0.7%;
+  color: transparent;
+  background-color: #c23b37;
+  position: fixed;
+  top: 0;
+  left: 2.8%;
+}
+
+.orangeL {
+  height: 110%;
+  width: 0.7%;
+  color: transparent;
+  background-color: #cd694f;
+  position: fixed;
+  top: 0;
+  left: 2.1%;
+}
+
+.yellowL {
+  height: 110%;
+  width: 0.7%;
+  color: transparent;
+  background-color: #edc850;
+  position: fixed;
+  top: 0;
+  left: 1.4%;
+}
+
+.greenL {
+  height: 110%;
+  width: 0.7%;
+  color: transparent;
+  background-color: #67ab53;
+  position: fixed;
+  top: 0;
+  left: 0.7%;
+}
+
+.blueL {
+  height: 110%;
+  width: 0.7%;
+  color: transparent;
+  background-color: #3da0d4;
+  position: fixed;
+  top: 0;
+  left: 0%;
+}

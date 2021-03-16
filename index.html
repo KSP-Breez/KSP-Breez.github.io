@@ -1,8 +1,142 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <body>
-            This is test text
-        </body>
-    </head>
+<head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styleSyntax.css">
+<link rel="stylesheet" href="styleRainbow.css">
+
+        
+<body>
+
+<div id="mainMenu">
+    <div id="mainMenuButton">
+        <a href="index.html" style="text-decoration: none;">
+            <div id="mainMenuButtonText">
+                <span style="color: #e0e0e0da;">Breez<span class="blinkingLine">_</span></span>
+            </div>
+        </a>
+        <div id="mainMenuSearch">
+            <form name="searchContent">
+                <input type="text" id="mainMenuSearchText" placeholder="Search Documentation" style="
+                background-color: #15110e;
+                outline: none;
+                border-color: transparent;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                font-size: 1.5em;
+                color: #e0e0e0da;
+                
+                display: flex;
+                justify-content: center;
+             
+                overflow: auto;
+                white-space: nowrap;">
+            </form>
+        </div>
+    </div>
+    <div id="mainMenuFileList"><pre>
+ <a href="index.html" style="text-decoration: none; color: #333333;">Home</a>
+ <a href="quickstart.html" style="text-decoration: none; color: #333333;">Quickstart guide</a>
+    </pre></div>
+</div>
+<div id="mainText" style="padding-top: 10%;">
+
+<h1><p>Breez</p></h1>
+
+<h2><p>Open Source, kOS Based, Transpiled (or Compiled) Language</p></h2>
+
+<div class="code"><pre><p>
+<span class="builtInFunction">print</span>(<span class="string">"Breez: The Open Source, kOS Based, Transpiled (or Compiled) Language. For Kerbal Space Nerds"</span>);
+<span class="keyword">global</span> interested =&gt; <span class="builtInVariable">true</span>;
+
+<span class="keyword">while</span> interested = <span class="builtInVariable">true</span> {
+  <span class="userFunction">download</span>();
+}
+</p></pre></div>
+
+<h2><p>Welcome to the Breez documentation website.</p></h2>
+<p>Here you will find the full documentation for the Breez programming language, and also tutorials for making simple programs in Breez.</p>
+
+<h1><p>What Is Breez?</p></h1>
+
+<p>Breez is a <a href="https://medium.com/madfish-solutions/what-is-a-transpiler-47beac592848">transpiled</a> language which is transformed into <a href="http://ksp-kos.github.io/KOS_DOC">Kerboscript</a>.
+You can use Breez to program rockets in KSP, and then run it through the kOS mod after compiling the code through Yamal (name for our compiler).
+We describe it as: <i>a stripped down version of Kerboscript that makes syntax more lightweight and also makes kOS more user/programmer friendly.</i></p>
+
+
+<h2><p>What is different?</p></h2>
+<p>Due to kOS being somewhat overly verbose, we have taken away all of the useless parts and shortened it all down.</p>
+<p>For example, if you were to be declaring a variable in kOS, it would look like this:</p>
+
+<div class="code"><p>
+<span class="keyword">set</span> variable <span class="keyword">to</span> <span class="number">0</span>.
+</p></div>
+
+<p>However with Breez you only need to write this:</p>
+
+<div class="code"><p>
+<span class="keyword">global</span> variable <span class="STR_LIT_DEC">=&gt; </span><span class="number">0</span>;
+</p></div>
+
+<p>This makes the code more like more common programming languages like Python or JavaScript, however there are many different bits from other popular languages.</p>
+
+<p>Some noticeable changes from kOS to Breez are:<br>
+&middot; <span class="codeInline">&VeryThinSpace;<span class="builtInFunction">throttle</span>(<span class="number">0.5</span>);&VeryThinSpace;</span> - You now change the throttle by simply calling it like a function!<br>
+&middot; <span class="codeInline">&VeryThinSpace;<span class="builtInFunction">hold</span>();&VeryThinSpace;</span> - We've changed <i>wait</i> to <i>hold</i> to add more of a countdown effect.<br>
+&middot; <span class="codeInline directives">&VeryThinSpace;@import:&VeryThinSpace;</span> - Similar to Obj-C/C++, you now <i>import</i> rather than doing <i>runPath</i> etc.<br>
+&middot; <span class="codeInline">&VeryThinSpace;||&VeryThinSpace;</span> - You now type these two lines to basically say <i>or</i>.<br>
+&middot; <span class="codeInline">&VeryThinSpace;<span class="builtInFunction">clear</span>();&VeryThinSpace;</span> - This is what <i>clearscreen</i> does in kOS.<br>
+&middot; Case-sensitivity - You now cannot type in <i>FUNC</i> and <i>fuNC</i> without getting a syntax error.<br>
+</p>
+
+<p>Obviously there are many more features, however you can experiment with those yourself!</p>
+
+
+<h2><p>A Basic Example Program</p></h2>
+
+We're going to demonstrate how different kOS is from Breez below by showing a short example of a KSP rocket scientists first script.
+
+<div class="code"><pre><p>
+<span class="comment"># This is the Breez code:</span>
+<span class="builtInFunction">clear</span>();
+
+<span class="keyword">global</span> helloText <span class="STR_LIT_DEC">=&gt;</span> <span class="string">"Hello World"</span>;
+<span class="builtInFunction">print</span>(helloText);
+
+<span class="builtInFunction">stage</span>();
+<span class="builtInFunction">throttle</span>(<span class="number">1</span>);
+<span class="builtInFunction">print</span>(<span class="string">"Ascending"</span>);
+</p></pre></div>
+<div class="code"><pre><p>
+<span class="comment">// This is the kOS code:</span>
+<span class="builtInFunction">clearscreen</span>.
+
+<span class="keyword">set</span> helloText <span class="keyword">to</span> <span class="string">"Hello World"</span>.
+<span class="builtInFunction">print</span> helloText.
+
+<span class="builtInFunction">stage</span>.
+<span class="builtInFunction">lock</span> throttle <span class="keyword">to</span> <span class="number">1</span>.
+<span class="builtInFunction">print</span> <span class="string">"Ascending"</span>.
+</p></pre></div>
+
+<p>As you can see, there is a significant difference between the two examples.</p>
+</div>
+
+
+
+<!--This section is responsible for the rainbow lines that you see in the background-->
+<div class="redR"></div>
+<div class="orangeR"></div>
+<div class="yellowR"></div>
+<div class="greenR"></div>
+<div class="blueR"></div>
+<div class="redL"></div>
+<div class="orangeL"></div>
+<div class="yellowL"></div>
+<div class="greenL"></div>
+<div class="blueL"></div>
+
+
+</body>
+</head>
 </html>
