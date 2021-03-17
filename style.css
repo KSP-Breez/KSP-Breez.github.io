@@ -1,8 +1,40 @@
+/*$font: 'Source Code Pro', monospace;
+$fontSize: 15px;
+$fontColor: #333333;
+$codeFontColor: #e0e0e0da;
+$commodoreGrey: #766d6c;
+$commodore64KeyboardBlack_CodeBackground: #15110e;
+$commodore64KeyboardBlackLighter_ScrollbarBackground: #1f1b1a;
+$commodoreGreyBright: #c8b8a7;*/
+:root {
+  --font: "Source Code Pro", monospace;
+  --fontSize: 15px;
+  --fontColor: #333333;
+  --codeFontColor: #e0e0e0da;
+  --commodoreGrey: #766d6c;
+  --commodore64KeyboardBlack_CodeBackground: #15110e;
+  --commodore64KeyboardBlackLighter_ScrollbarBackground: #1f1b1a;
+  --commodoreGreyBright: #c8b8a7;
+  --commodoreSoftWhite: #c9b7a2;
+}
+
+[data-theme=dark] {
+  --font: "Source Code Pro", monospace;
+  --fontSize: 15px;
+  --fontColor: #cccccc;
+  --codeFontColor: #e0e0e0da;
+  --commodoreGrey: #25242b;
+  --commodore64KeyboardBlack_CodeBackground: #15110e;
+  --commodore64KeyboardBlackLighter_ScrollbarBackground: #1f1b1a;
+  --commodoreGreyBright: #1f1f25;
+  --commodoreSoftWhite: #242530;
+}
+
 body {
-  background-color: #766d6c;
-  font-family: "Source Code Pro", monospace;
-  font-size: 15px;
-  color: #333333;
+  background-color: var(--commodoreGrey);
+  font-family: var(--font);
+  font-size: var(--fontSize);
+  color: var(--fontColor);
   overscroll-behavior: none;
 }
 
@@ -30,11 +62,11 @@ body {
   padding: 35% 10px 40px 10px;
   top: 50%;
   left: 50%;
-  border-left: 5px solid #333333;
-  border-right: 5px solid #333333;
+  border-left: 5px solid var(--fontColor);
+  border-right: 5px solid var(--fontColor);
   -ms-transform: translate(-35%, -50%);
   transform: translate(-35%, -50%);
-  background-color: #c8b8a7;
+  background-color: var(--commodoreGreyBright);
   min-height: 100%;
   display: flex;
   justify-content: center;
@@ -50,10 +82,10 @@ body {
   padding: 15% 10px 10px 10px;
   top: 50%;
   left: 50%;
-  border-left: 5px solid #333333;
+  border-left: 5px solid var(--fontColor);
   -ms-transform: translate(-214.5%, -50%);
   transform: translate(-214.5%, -50%);
-  background-color: #c9b7a2;
+  background-color: var(--commodoreSoftWhite);
   min-height: 100%;
   width: 18.7%;
   display: flex;
@@ -63,7 +95,7 @@ body {
 #mainMenuFileList {
   position: fixed;
   top: 40%;
-  border-top: 5px solid #333333;
+  border-top: 5px solid var(--fontColor);
   height: 100%;
   width: 100%;
   font-size: 1.5em;
@@ -78,8 +110,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 5px solid #333333;
-  background-color: #15110e;
+  border-bottom: 5px solid var(--fontColor);
+  background-color: var(--commodore64KeyboardBlack_CodeBackground);
   height: 10%;
   width: 100%;
 }
@@ -93,11 +125,12 @@ body {
 }
 
 #mainMenuSearch {
-  background-color: #15110e;
+  background-color: var(--commodore64KeyboardBlack_CodeBackground);
   border-radius: 20px;
   position: fixed;
-  border: 3px solid #333333;
+  border: 3px solid var(--fontColor);
   top: 23.5%;
+  right: 0%;
   height: 1.5em;
   width: 90%;
   display: flex;
@@ -107,14 +140,26 @@ body {
   white-space: nowrap;
 }
 
+#DarkLightSwitch {
+  border: none;
+  background-color: transparent;
+  position: fixed;
+  top: 23.6%;
+  left: -2%;
+  outline: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 #mainMenuSearchText input {
   outline: none;
   border-color: inherit;
   -webkit-box-shadow: none;
   box-shadow: none;
   font-size: 1.5em;
-  color: #e0e0e0da;
-  background-color: #15110e;
+  color: var(--codeFontColor);
+  background-color: var(--commodore64KeyboardBlack_CodeBackground);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,8 +173,8 @@ body {
   -webkit-box-shadow: none;
   box-shadow: none;
   font-size: 1.5em;
-  color: #e0e0e0da;
-  background-color: #15110e;
+  color: var(--codeFontColor);
+  background-color: var(--commodore64KeyboardBlack_CodeBackground);
   display: flex;
   justify-content: center;
   overflow: auto;
@@ -156,37 +201,23 @@ body {
   background-color: transparent;
 }
 
-::-webkit-input-placeholder {
-  /* Edge */
-  color: #1f1b1a;
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #1f1b1a;
-}
-
-::placeholder {
-  color: #1f1b1a;
-}
-
 h1 {
   height: 1%;
-  border-bottom: 5px solid #333333;
+  border-bottom: 5px solid var(--fontColor);
   overflow-wrap: break-word;
 }
 
 h2 {
   height: 1%;
-  border-bottom: 3px solid #333333;
+  border-bottom: 3px solid var(--fontColor);
   overflow-wrap: break-word;
 }
 
 .code {
   margin: 2% 1% 2% 1%;
   padding: 3px;
-  color: #e0e0e0da;
-  background-color: #15110e;
+  color: var(--codeFontColor);
+  background-color: var(--commodore64KeyboardBlack_CodeBackground);
   border-radius: 20px;
   min-height: 1%;
   width: 95%;
@@ -194,9 +225,9 @@ h2 {
 }
 
 .codeInline {
-  color: #e0e0e0da;
+  color: var(--codeFontColor);
   padding: 10px, 10px, 10px, 10px;
-  background-color: #15110e;
+  background-color: var(--commodore64KeyboardBlack_CodeBackground);
   border-radius: 10px;
   height: 1em;
   min-width: 20px;

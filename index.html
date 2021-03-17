@@ -38,10 +38,34 @@
                 white-space: nowrap;">
             </form>
         </div>
+        <button id="DarkLightSwitch"><img src="darklightSwitch.png" width="22" height="22"></button>
+        <script type="text/javascript">
+            // Taken from https://www.pullrequest.com/blog/how-to-implement-dark-mode-with-css-js/#the-switch
+
+            // Wait for document to load
+            document.addEventListener("DOMContentLoaded", function(event) {
+                document.documentElement.setAttribute("data-theme", "light");
+            
+                // Get our button switcher
+                var themeSwitcher = document.getElementById("DarkLightSwitch");
+                // When our button gets clicked
+                themeSwitcher.onclick = function() {
+                    // Get the current selected theme, on the first run
+                    // it should be `light`
+                    var currentTheme = document.documentElement.getAttribute("data-theme");
+              
+                    // Switch between `dark` and `light`
+                    var switchToTheme = currentTheme === "dark" ? "light" : "dark";
+              
+                    // Set our currenet theme to the new one
+                    document.documentElement.setAttribute("data-theme", switchToTheme);
+                }
+            });
+        </script>
     </div>
     <div id="mainMenuFileList"><pre>
- <a href="index.html" style="text-decoration: none; color: #333333;">Home</a>
- <a href="quickstart.html" style="text-decoration: none; color: #333333;">Quickstart guide</a>
+ <a href="index.html" style="text-decoration: none;">Home</a>
+ <a href="quickstart.html" style="text-decoration: none;">Quickstart guide</a>
     </pre></div>
 </div>
 <div id="mainText" style="padding-top: 10%;">
